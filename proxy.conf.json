@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://intense-plateau-06126.herokuapp.com/categories",
+      "secure": false
+    }
+  }
