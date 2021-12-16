@@ -1,0 +1,20 @@
+
+<div class="todos-card">
+    <ul class ="todos-card">
+        <li *ngFor="let todo of todoList">
+          <mat-card>
+          <h2 class="card-title" >{{ todo.title}}</h2>
+      <div class="todo" *ngFor="let item of todo.todos">
+      <input type="checkbox"
+            name="isCompleted" 
+            (change)="onComplete(item)"
+            [(ngModel)] = "item.isCompleted">
+            
+      <span *ngIf="!item.isCompleted">{{ item.text }}</span>
+      <span *ngIf="item.isCompleted"><del>{{ item.text }}</del></span>
+    
+       </div>
+      </mat-card>
+        </li>
+      </ul>
+</div>

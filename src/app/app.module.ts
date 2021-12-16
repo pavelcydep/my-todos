@@ -1,23 +1,42 @@
 import { NgModule } from '@angular/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { NgSelectModule } from '@ng-select/ng-select';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
-import {MatIconModule} from '@angular/material/icon';
+import { CardComponent } from './card/card.component';
 import { HeaderComponent } from './header/header.component';
-import { FormComponent } from './form/form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
-  imports:      [ BrowserModule, ReactiveFormsModule, MatCardModule,MatIconModule,HttpClientModule],
-  declarations: [ AppComponent, HeaderComponent, FormComponent],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    CardComponent,
+    HeaderComponent,
+    
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+    HttpClientModule,
+    NgSelectModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatGridListModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-  
-
-
- }
+export class AppModule { }

@@ -9,3 +9,56 @@ color: rgb(255, 238, 238);
     display:flex;
     width: 50%;
 }
+.input
+{
+  width: 90%;
+  padding:10px;
+  border-radius:10px;
+}
+.example-button-row {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.popup__title{
+  text-align: center;
+  color: black;
+}
+.popup{
+  
+
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.5);
+  
+  }
+  .form-content{
+    width: 300px;
+    min-height: 330px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 34px 36px;
+  
+  }
+  .button{
+    background-color: rgb(93, 93, 110);
+    color:cornsilk;
+  }
+  .button-icons
+    
+    {
+      background: rgb(99, 99, 177);
+      border: 0;
+      color:cornsilk;
+    }
+  

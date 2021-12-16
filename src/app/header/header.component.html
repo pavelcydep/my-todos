@@ -2,7 +2,27 @@
     <h1 class="title">
 Задачи
     </h1>
-    <span class="material-icons">
+    <button class="material-icons button-icons" (click)="popupToggle()">
         add
-        </span> 
+    </button> 
+    
+   
+    <div  *ngIf="toggle" class="popup">
+        <form  class="form-content" action="#" >
+            <h2 class="popup__title">Новая задача</h2>
+               <input class="input" type="text" name="text" [(ngModel)]="text" required>
+               <ng-select class="input" placeholder="Категория" [ngModelOptions]="{standalone: true}" [items]="todoList"
+               bindLabel="title" 
+               bindValue="id" 
+               [(ngModel)]="selected">
+              </ng-select>
+             
+              <div class="example-button-row">
+                <button mat-raised-button class="button" (click)="popupToggle()" >Отмена</button>
+               <button mat-raised-button color="primary"  (click)="onCreate()">Добавить</button>
+             
+             
+              </div>
+             </form>
+            </div>
 </header>
